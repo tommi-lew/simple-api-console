@@ -1,0 +1,23 @@
+!!!
+%html
+  %head
+    %title My Sinatra Website
+    %link(rel="stylesheet" href="css/application.css")
+    %script{:type => "text/javascript",
+                :src  => "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"}
+    %script{:type => "text/javascript",
+            :src  => "javascripts/application.js"}
+  %body
+    %h1 Welcome
+    %p
+      Welcome to my website made with Sinatra and HAML
+
+    %div
+      %button#api_request
+        GET
+
+      %code.codeblock
+        https://api.twitter.com/1/trends/daily.json
+
+      %pre
+        %code{:id => "request_result", :style => "display: none;", :class => "display: none;"}
